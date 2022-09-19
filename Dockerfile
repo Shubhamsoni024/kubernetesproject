@@ -15,6 +15,9 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page277/dr
 WORKDIR /var/www/html/
 
 ## extracting the website in the documentroot
+RUN unzip dryme.zip
+
+## Copy the website file to the main document root
 RUN cp -rvf laundry-service-website-template/* .
 
 ## removing the unnessary fies

@@ -9,19 +9,19 @@ RUN yum update -y &&   \
     yum install applydeltarpm httpd wget zip unzip net-tools -y
 
 ### adding the website to the apache document root
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page276/gymnast.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page277/dryme.zip /var/www/html/
 
 ### Chaning the working directory
 WORKDIR /var/www/html/
 
 ## extracting the website in the documentroot
-RUN unzip gymnast.zip
+RUN unzip dryme.zip
 
 ## Copy the website file to the main document root
-RUN cp -rvf gym-website-template/* .
+RUN cp -rvf laundry-service-website-template/* .
 
 ## removing the unnessary fies
-RUN rm -rf gym-website-template gymnast.zip
+RUN rm -rf laundry-service-website-template dryme.zip
 
 ### Setting up the environment variable
 ENV myname shubham_apache
